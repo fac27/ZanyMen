@@ -120,10 +120,13 @@ body {
 }
 
 /* ********************* */
-/* navigation */
+/* header */
+header {
+  margin-top: 2rem;
+}
+
 nav img {
-  width: 14rem;
-  height: 12rem;
+  width: 15%;
 }
 
 nav ul {

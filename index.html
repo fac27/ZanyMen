@@ -8,19 +8,14 @@
 
     <link rel="stylesheet" href="./styles.css">
     <title>Zany Men</title>
-    <script defer>
-        function showDescription(button) {
-            let bioDescription = button.parentElement.classList.toggle('bio-box__info--active')
-        }
-    </script>
 </head>
 
-<body>
+<body class="stack-l">
 
     <!-- *********************** -->
     <!-- NAVIGATION SECTION -->
     <header>
-        <nav class="flex row align-center justify-around">
+        <nav class="flex row center align-center justify-between">
             <img class="" src="./imgs/logo1.png" alt="website logo reading: ZanyMen">
 
             <!-- nav links -->
@@ -58,7 +53,7 @@
     <!-- *********************** -->
     <!-- Bios section -->
     <section
-        class="section section--bio center flex row align-center wrap justify-space-around">
+        class="section section--bio center flex row align-center wrap justify-around">
         <!-- bio #1 -->
         <div class="bio-box">
             <div class="bio-box__body">
@@ -66,7 +61,7 @@
                     src="https://imgs.search.brave.com/VuHiYZVPt3Lw0fsZqsekx_U2ogGMFi1u15H4ycHOaUs/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9jZG4t/aW1hZ2VzLTEubWVk/aXVtLmNvbS9tYXgv/MjAwMC8xKnlsUVRj/OWd5cC1mdHRwZmlx/OWdua1EuanBlZw"
                     alt="">
             </div>
-            <div class="bio-box__info row">
+            <div class="bio-box__info flex row justify-around">
                 <p class="bio-box__title">Alphonso</p>
                 <p class="bio-box__description justified">
                     After disrupting the marble counter-top industry with his first
@@ -76,8 +71,7 @@
                     His great-great-grandfather also invented the left shoe in 1818.
                 </p>
                 <button class="bio-box__button" type="button"
-                    aria-label="read more about Alphonso"
-                    onclick="showDescription(this)">Read more
+                    aria-label="read more about Alphonso">Read more
                 </button>
             </div>
         </div>
@@ -89,14 +83,13 @@
                     src="https://imgs.search.brave.com/O_IZruYZ8nF-GDm6Qs_6mLdXl4sGICWXgy-tiTrksmk/rs:fit:1200:720:1/g:ce/aHR0cHM6Ly9pLnl0/aW1nLmNvbS92aS9y/aWlLd1JUNUZ0SS9t/YXhyZXNkZWZhdWx0/LmpwZw"
                     alt="">
             </div>
-            <div class="bio-box__info row">
+            <div class="bio-box__info flex row justify-around">
                 <p class="bio-box__title">Zackarie</p>
                 <p class="bio-box__description justified">Lorem ipsum dolor sit amet
                     consectetur adipisicing elit. Voluptates,
                     necessitatibus.</p>
                 <button class="bio-box__button" type="button"
-                    aria-label="read more about Zakarie"
-                    onclick="showDescription(this)">Read more
+                    aria-label="read more about Zakarie">Read more
                 </button>
             </div>
         </div>
