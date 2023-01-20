@@ -3,4 +3,130 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-size:18px; /*this is for accessibility for dyslexic people*/
+  font-family:sans-serif;
+  box-sizing:border-box;
+}
+
+:root{
+  --color-base:#C2B9B0;
+  --color-highlight:#E7717D;
+  --color-dark:#7E685A;
+  --width-sm:20rem;
+  --width-md:40rem;
+  --width-lg:60rem;
+}
+
+.center{
+  margin-left:auto;
+  margin-right:auto;
+  width:80%
+}
+
+.row{
+  display:flex;
+  flex-flow: row wrap;
+  align-items:center;
+  justify-content: space-around;
+}
+
+.justified{
+  text-align: justify;
+}
+
+.border{ /*temporary class to help me work -- to delete later*/
+  border:2px solid black;
+}
+
+/*section class and different section flags*/
+.section{
+  height:100vh;
+}
+
+.section--bio{
+  height:100vh;
+  display:flex;
+  flex-flow:column nowrap;
+  align-items:center;
+  justify-content:space-around;
+}
+
+/**Bio Section**/
+.bio-box{
+  height:40%;
+  max-width:var(--width-md);
+  position:relative;
+}
+
+.bio-box__info{
+  background-color:var(--color-base);
+  height:20%;
+  padding:5%;
+  
+}
+
+.bio-box__title{
+  text-align:center;
+  font-size:1.2rem;
+  letter-spacing:.25rem;
+}
+
+.bio-box__button{
+  padding:.2em;
+  border:none;
+  background-color:var(--color-base);
+  color:var(--color-dark);
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.bio-box__button:hover{
+  color:var(--color-highlight);
+}
+
+.bio-box__description{
+  display:none;
+  position:absolute;
+  width:90%;
+  height:70%;
+  padding:.8em;
+  border-radius:15px;
+  top:5%;
+  left:5%;
+  background-color:var(--color-highlight);
+}
+
+.bio-box__info--active > .bio-box__description{
+  display:block;
+}
+
+.bio-box__body{
+  height:80%;
+}
+
+.bio-box__image{
+  object-fit:cover;
+  height:100%;
+  width:100%;
+}
+
+
+
+/** media queries for larger screen sizes **/
+
+/*small tablets*/
+@media screen and (min-width:620px) {
+  .section--bio{
+    flex-flow:row nowrap;
+    justify-items:space-between;
+  }
+
+  .bio-box{
+
+  }
+}
+
+/*large tablets and laptops*/
+@media screen and (min-width: 920px){
+  
 }
