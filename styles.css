@@ -5,7 +5,6 @@
   box-sizing: border-box;
   font-size:18px; /*this is for accessibility for dyslexic people*/
   font-family:sans-serif;
-  box-sizing:border-box;
 }
 
 :root{
@@ -30,9 +29,34 @@
   justify-content: space-around;
 }
 
+.align-start{
+  align-items:flex-start;
+}
+
+.align-end{
+  align-items:flex-end;
+}
+
+.flex{
+  display:flex;
+  flex-flow: row wrap;
+  align-items:center;
+  justify-content: space-around;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns: minmax(var(--width-sm, --width-lg));
+  gap:1rem;
+}
+
 .justified{
   text-align: justify;
 }
+
+.stack > * + *{
+  margin-top:.5rem;
+} 
 
 .border{ /*temporary class to help me work -- to delete later*/
   border:2px solid black;
@@ -54,7 +78,7 @@
 /**Bio Section**/
 .bio-box{
   height:40%;
-  max-width:var(--width-md);
+  max-width:var(--width-md);  
   position:relative;
 }
 
@@ -116,13 +140,9 @@
 
 /*small tablets*/
 @media screen and (min-width:620px) {
-  .section--bio{
+  .row{
     flex-flow:row nowrap;
     justify-items:space-between;
-  }
-
-  .bio-box{
-
   }
 }
 
