@@ -10,6 +10,7 @@
 :root {
   --color-base: #f5f5f5;
   --color-highlight: #e7717d;
+  --color-text: #1d3557;
   --color-dark: #7e685a;
   --color-black: #000000;
   --color-white: #ffffff;
@@ -24,6 +25,7 @@ html {
 
 body {
   background-color: var(--color-base);
+  color: var(--color-text);
 }
 
 .center {
@@ -126,7 +128,7 @@ header {
 }
 
 nav img {
-  width: 15%;
+  width: 17%;
 }
 
 nav ul {
@@ -134,7 +136,14 @@ nav ul {
 }
 
 nav ul a {
-  color: var(--color-black);
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+nav ul a:hover {
+  text-decoration: underline;
+  color: var(--color-highlight);
 }
 
 /* ************************** */
@@ -211,14 +220,26 @@ nav ul a {
 
 /** media queries for larger screen sizes **/
 
-/*small tablets*/
-@media screen and (min-width: 620px) {
-  .row {
-    flex-flow: row nowrap;
-    justify-items: space-between;
-  }
+/*large tablets and laptops*/
+@media (max-width: 820px) {
 }
 
-/*large tablets and laptops*/
-@media screen and (min-width: 920px) {
+/*small tablets*/
+@media (max-width: 520px) {
+  .row {
+    flex-flow: row;
+  }
+
+  header nav {
+    flex-direction: column !important;
+    gap: 2rem !important;
+  }
+
+  nav img {
+    width: 50%;
+  }
+
+  nav ul {
+    gap: 0.6rem !important;
+  }
 }
