@@ -10,27 +10,27 @@
     <title>Zany Men</title>
 </head>
 
-<body class="stack-l">
+<body class="stack-xl">
 
     <!-- *********************** -->
     <!-- NAVIGATION SECTION -->
     <header>
-        <nav class="flex row center align-center justify-between">
+        <nav class="flex align-center justify-around gap-s">
             <img class="" src="./imgs/logo1.png" alt="website logo reading: ZanyMen">
 
             <!-- nav links -->
-            <ul class="flex row gap-m">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Our Work</a></li>
-                <li><a href="#">Contact</a></li>
+            <ul class="flex row align-center justify-between gap-m">
+                <li><a aria-label="learn more about our company" href="#intro-section">About</a></li>
+                <li><a aria-label="visit the bios of our founders" href="#bio-section">Bios</a></li>
+                <li><a aria-label="visit a gallery of products" href="#gallery-section">Gallery</a></li>
+                <li><a aria-label="contact us" href="#form-section">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- *********************** -->
     <!-- INTRO SECTION -->
-    <section class="section section--intro center">
+    <section id="intro-section" class="section section--intro center">
         <h1>Your one spot to buy or rent wacky inflatable guys</h1>
         <p>
             Highlighted section for declaration of inclusivity!!
@@ -52,8 +52,7 @@
 
     <!-- *********************** -->
     <!-- Bios section -->
-    <section
-        class="section section--bio center flex row align-center wrap justify-around">
+    <section id="bio-section" class="section section--bio center"> <!--Too many classes were causing issues with mediaqueries, we need to be minimal and selective when applying these-->
         <!-- bio #1 -->
         <div class="bio-box">
             <div class="bio-box__body">
@@ -99,7 +98,7 @@
 
     <!-- *********************** -->
     <!-- Works section -->
-    <section class="section section--galery center">
+    <section id="gallery-section" class="section section--galery center">
         <!-- gallery of wacky guys -->
         <article>
             <h3>Model Name</h3>
@@ -122,7 +121,8 @@
 
     <!-- *********************** -->
     <!-- Form section -->
-    <form action="">
+    <section id="form-section" class="section center">
+        <form action="">
         <div class="inputs">
             <input type="text" name="name" id="name">
             <input type="email" name="email" id="email">
@@ -138,6 +138,7 @@
             <button type="submit">Submit</button>
         </div>
     </form>
+    </section>
 
     <!-- *********************** -->
     <!-- Footer section -->
