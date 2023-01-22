@@ -120,17 +120,17 @@ body {
 /* header */
 header {
   /* margin-top: 2rem; */
-  width:100vw;
-  position:fixed;
-  top:0;
-  left:0;
-  padding:.5rem;
-  z-index:1;
-  background-color:var(--color-dark);
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0.5rem;
+  z-index: 1;
+  background-color: var(--color-dark);
 }
 
-nav{
-  flex-flow:row;
+nav {
+  flex-flow: row;
 }
 
 nav img {
@@ -223,35 +223,73 @@ nav ul a {
   width: 100%;
 }
 
+/* contact form */
+form fieldset {
+  padding: 0.6rem;
+}
+
+form fieldset legend {
+  font-weight: 600;
+  color: var(--color-highlight);
+}
+
+form .inputs > * {
+  width: 70%;
+}
+
+form .inputs input {
+  padding: 0.4rem;
+}
+
+form .buttons button {
+  width: fit-content;
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.3rem;
+  border: 1px solid rgb(171, 169, 169);
+  background: var(--color-text);
+  color: var(--color-base);
+  cursor: pointer;
+}
+
+form .buttons button:hover {
+  background: transparent;
+  color: var(--color-black);
+  border: 1px solid var(--color-text);
+}
+
 /** media queries for larger screen sizes **/
 
 /*large tablets and laptops*/
-@media (min-width: 820px) { /*do we actually need this one???????*/
+@media (min-width: 820px) {
+  /*do we actually need this one???????*/
+  /* it doesn't look like it. for now */
 }
 
 /*small tablets*/
 @media (min-width: 520px) {
-  nav img{
-    width:10rem;
+  nav img {
+    width: 10rem;
   }
 
   nav ul a:hover {
-  text-decoration: underline;
-  color: var(--color-highlight);
+    text-decoration: underline;
+    color: var(--color-highlight);
   }
 
-  .section{
-    scroll-margin-top:6rem;
+  .section {
+    scroll-margin-top: 6rem;
   }
 
-  .section:first-of-type{
-    margin-top:6rem;
+  .section:first-of-type {
+    margin-top: 6rem;
   }
 
-  .section--bio{
+  .section--bio {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
     justify-content: space-around;
   }
+
+  /* couldn't make the form styles work :( */
 }

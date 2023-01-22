@@ -20,9 +20,12 @@
 
             <!-- nav links -->
             <ul class="flex row align-center justify-between gap-m">
-                <li><a aria-label="learn more about our company" href="#intro-section">About</a></li>
-                <li><a aria-label="visit the bios of our founders" href="#bio-section">Bios</a></li>
-                <li><a aria-label="visit a gallery of products" href="#gallery-section">Gallery</a></li>
+                <li><a aria-label="learn more about our company"
+                        href="#intro-section">About</a></li>
+                <li><a aria-label="visit the bios of our founders"
+                        href="#bio-section">Bios</a></li>
+                <li><a aria-label="visit a gallery of products"
+                        href="#gallery-section">Gallery</a></li>
                 <li><a aria-label="contact us" href="#form-section">Contact</a></li>
             </ul>
         </nav>
@@ -52,7 +55,8 @@
 
     <!-- *********************** -->
     <!-- Bios section -->
-    <section id="bio-section" class="section section--bio center"> <!--Too many classes were causing issues with mediaqueries, we need to be minimal and selective when applying these-->
+    <section id="bio-section" class="section section--bio center">
+        <!--Too many classes were causing issues with mediaqueries, we need to be minimal and selective when applying these-->
         <!-- bio #1 -->
         <div class="bio-box">
             <div class="bio-box__body">
@@ -122,22 +126,24 @@
     <!-- *********************** -->
     <!-- Form section -->
     <section id="form-section" class="section center">
-        <form action="">
-        <div class="inputs">
-            <input type="text" name="name" id="name">
-            <input type="email" name="email" id="email">
-            <!-- order number -->
-            <input type="number" name="order" id="order">
-            <!-- color of the model -->
-            <input type="color" name="color" id="color">
-            <textarea name="message" id="message" cols="30" rows="10"></textarea>
-        </div>
+        <form class="center" action="">
+            <fieldset class="flex column stack-m">
+                <legend>Contact Us</legend>
+                <div class="inputs center flex column gap-s">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email">
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" cols="30" rows="8"></textarea>
+                </div>
 
-        <div class="buttons">
-            <button type="reset">Reset</button>
-            <button type="submit">Submit</button>
-        </div>
-    </form>
+                <div class="buttons center flex row gap-m">
+                    <button type="reset">Reset</button>
+                    <button type="submit">Submit</button>
+                </div>
+            </fieldset>
+        </form>
     </section>
 
     <!-- *********************** -->
