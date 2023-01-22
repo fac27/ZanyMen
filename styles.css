@@ -116,19 +116,25 @@ body {
   gap: 2rem;
 }
 
-.border {
-  /*temporary class to help me work -- to delete later*/
-  border: 2px solid black;
-}
-
 /* ********************* */
 /* header */
 header {
-  margin-top: 2rem;
+  /* margin-top: 2rem; */
+  width:100vw;
+  position:fixed;
+  top:0;
+  left:0;
+  padding:.5rem;
+  z-index:1;
+  background-color:var(--color-dark);
+}
+
+nav{
+  flex-flow:row;
 }
 
 nav img {
-  width: 17%;
+  width: 25%;
 }
 
 nav ul {
@@ -141,19 +147,18 @@ nav ul a {
   color: var(--color-text);
 }
 
-nav ul a:hover {
-  text-decoration: underline;
-  color: var(--color-highlight);
-}
-
 /* ************************** */
 /*section class and different section flags*/
 .section {
   height: 100vh;
+  scroll-margin-top: 4rem;
 }
 
+/* .section:first-of-type{
+ margin-top:4rem;
+} */
+
 .section--bio {
-  /* height:100vh; */
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
@@ -221,25 +226,32 @@ nav ul a:hover {
 /** media queries for larger screen sizes **/
 
 /*large tablets and laptops*/
-@media (max-width: 820px) {
+@media (min-width: 820px) { /*do we actually need this one???????*/
 }
 
 /*small tablets*/
-@media (max-width: 520px) {
-  .row {
-    flex-flow: row;
+@media (min-width: 520px) {
+  nav img{
+    width:10rem;
   }
 
-  header nav {
-    flex-direction: column !important;
-    gap: 2rem !important;
+  nav ul a:hover {
+  text-decoration: underline;
+  color: var(--color-highlight);
   }
 
-  nav img {
-    width: 50%;
+  .section{
+    scroll-margin-top:6rem;
   }
 
-  nav ul {
-    gap: 0.6rem !important;
+  .section:first-of-type{
+    margin-top:6rem;
+  }
+
+  .section--bio{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-around;
   }
 }
