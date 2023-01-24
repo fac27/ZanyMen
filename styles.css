@@ -249,13 +249,53 @@ h1 {
   width: 100%;
 }
 
-/** media queries for larger screen sizes **/
-
-/*large tablets and laptops*/
-@media (min-width: 820px) {
-  /*do we actually need this one???????*/
+/* contact form */
+form .inputs > * {
+  width: 80%;
 }
 
+form .inputs input {
+  padding: 0.3rem;
+}
+
+form .inputs input {
+  padding: 0.3rem;
+}
+
+form textarea::placeholder {
+  padding: 0.5rem;
+}
+
+form .buttons button {
+  width: fit-content;
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.3rem;
+  border: 1px solid rgb(171, 169, 169);
+  background: var(--color-text);
+  color: var(--color-base);
+  cursor: pointer;
+}
+
+form .buttons button:hover {
+  background: transparent;
+  color: var(--color-black);
+  border: 1px solid var(--color-text);
+}
+
+form p {
+  width: 80%;
+  background: #1d65cb;
+  color: var(--color-base);
+  padding: 0.4rem;
+  border-radius: 0.3rem;
+  display: none;
+}
+
+form .info__active {
+  display: block;
+}
+
+/** media queries for larger screen sizes **/
 /*small tablets*/
 @media (min-width: 520px) {
   nav img {
@@ -287,5 +327,17 @@ h1 {
     flex-flow: row nowrap;
     align-items: center;
     justify-content: space-around;
+  }
+
+  form .inputs > * {
+    width: 50%;
+  }
+
+  form .inputs input {
+    padding: 0.4rem;
+  }
+
+  form p {
+    width: 50%;
   }
 }
