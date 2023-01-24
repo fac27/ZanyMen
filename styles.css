@@ -3,8 +3,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-size: 18px; /*this is for accessibility for dyslexic people*/
+  font-size: 18px;
   font-family: sans-serif;
+  letter-spacing: 0.05rem;
 }
 
 :root {
@@ -116,10 +117,15 @@ body {
   gap: 2rem;
 }
 
+h2 {
+  font-size: 1.2rem;
+  color: var(--color-text);
+  letter-spacing: 0.1rem;
+}
+
 /* ********************* */
 /* header */
 header {
-  /* margin-top: 2rem; */
   width: 100vw;
   position: fixed;
   top: 0;
@@ -154,17 +160,37 @@ nav ul a {
   scroll-margin-top: 4rem;
 }
 
-/* .section:first-of-type{
- margin-top:4rem;
-} */
-
 .section--bio {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
+/* **Intro Section* */
+.section--intro {
+  position: relative;
+}
+
+#intro-banner-img {
+  width: 100%;
+  object-fit: cover;
+}
+
+h1 {
+  font-size: 1.5rem;
+  position: absolute;
+  top: -0.5rem;
+  left: 1rem;
+  color: var(--color-text);
+}
+
+#inclusivity-declaration {
+  background-color: var(--color-highlight);
+  padding: 0.5em;
+  border-radius: 20px;
+  text-align: center;
+}
 /**Bio Section**/
 .bio-box {
   height: 40%;
@@ -284,6 +310,13 @@ form .buttons button:hover {
     margin-top: 6rem;
   }
 
+  /* Intro Section */
+  h1 {
+    font-size: 5rem;
+    left: 2rem;
+  }
+
+  /* Bio Section */
   .section--bio {
     display: flex;
     flex-flow: row nowrap;
