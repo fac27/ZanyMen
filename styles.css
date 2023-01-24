@@ -79,12 +79,6 @@ body {
   align-items: flex-end;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: minmax(var(--width-sm, --width-lg));
-  gap: 1rem;
-}
-
 .justified {
   text-align: justify;
 }
@@ -121,6 +115,12 @@ h2 {
   font-size: 1.2rem;
   color: var(--color-text);
   letter-spacing: 0.1rem;
+}
+
+hr{
+  border:2.5px solid var(--color-text);
+  margin-bottom:2rem;
+  border-radius:20px;
 }
 
 /* ********************* */
@@ -160,7 +160,7 @@ nav ul a {
   scroll-margin-top: 4rem;
 }
 
-.section--bio {
+#bios-gallery {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
@@ -233,12 +233,13 @@ h1 {
   display: none;
   position: absolute;
   width: 90%;
-  height: 70%;
+  height: 65%;
   padding: 0.8em;
   border-radius: 15px;
   top: 5%;
   left: 5%;
   background-color: var(--color-highlight);
+  overflow:auto;
 }
 
 .bio-box__info--active > .bio-box__description {
@@ -247,12 +248,47 @@ h1 {
 
 .bio-box__body {
   height: 80%;
+  max-width:450px;
 }
 
 .bio-box__image {
-  object-fit: cover;
-  height: 100%;
+  object-fit:cover;
   width: 100%;
+}
+
+/* Gallery Section */
+.section--gallery{
+}
+
+#gallery-grid{
+  overflow:scroll;
+  height:70vh;
+  display:grid;
+  grid-auto-flow:column;
+  grid-auto-columns:225px;
+  grid-template-rows: repeat(2, 49%);
+  gap:10px;
+}
+
+.gallery-grid--frame{
+  box-shadow: 0 0 5px var(--color-highlight);
+}
+
+.gallery-grid--image{
+  height:100%;
+  width:100%;
+  object-fit:cover;
+}
+
+.gallery-grid--info{}
+
+/* ***Grid CSS Fundamentals*** */
+.gallery-grid--frame__long{
+  grid-column:span 2;
+}
+
+.gallery-grid--frame__tall{
+  grid-row:span 2;
 }
 
 /* contact form */
@@ -303,7 +339,7 @@ form .info__active {
 
 /** media queries for larger screen sizes **/
 /*small tablets*/
-@media (min-width: 520px) {
+@media screen and (min-width: 520px) {
   nav img {
     width: 10rem;
   }
@@ -327,26 +363,28 @@ form .info__active {
     left: 2rem;
   }
 
-  #intro--banner__img {
+  #intro-banner-img {
     height: 60%;
   }
 
   /* Bio Section */
-  .section--bio {
-    /* border: 5px solid black; */
-  }
-
   #bio-header {
     font-size: 2.5rem;
   }
 
-  .section--bio {
+  #bios-gallery {
+    width:100%;
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
   }
 
+  .bio-box__image{
+    height:300px;
+  }
+  
+  /* Form Section */
   form .inputs > * {
     width: 50%;
   }
