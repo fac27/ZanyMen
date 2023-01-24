@@ -125,24 +125,25 @@
 
     <!-- *********************** -->
     <!-- Form section -->
-    <section id="form-section" class="section center">
-        <form class="center" action="">
-            <fieldset class="flex column stack-m">
-                <legend>Contact Us</legend>
-                <div class="inputs center flex column gap-s">
-                    <label for="name">Name</label>
-                    <input type="text" name="name" id="name">
-                    <label for="email">Email</label>
-                    <input type="email" name="email" id="email">
-                    <label for="message">Message</label>
-                    <textarea name="message" id="message" cols="30" rows="8"></textarea>
-                </div>
+    <section id="form-section" class="section center stack-m">
+        <h3>Contact Us</h3>
+        <form class="submission__form stack-m" action="">
+            <div class="inputs flex column stack-s">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" required>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required>
+                <label for="message">Message</label>
+                <textarea name="message" id="message" cols="30" rows="8"
+                    placeholder="your message here.." required></textarea>
+            </div>
 
-                <div class="buttons center flex row gap-m">
-                    <button type="reset">Reset</button>
-                    <button type="submit">Submit</button>
-                </div>
-            </fieldset>
+            <div class="buttons flex row gap-m">
+                <button type="reset">Reset</button>
+                <button type="submit">Submit</button>
+            </div>
+
+            <p class="submission__info">Form submitted successfully!</p>
         </form>
     </section>
 
