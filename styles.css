@@ -165,7 +165,7 @@ nav ul a {
   flex-flow: column nowrap;
   align-items: center;
   justify-content: space-evenly;
-  position:relative;
+  position: relative;
 }
 
 /* **Intro Section* */
@@ -193,9 +193,9 @@ h1 {
   text-align: center;
 }
 /**Bio Section**/
-#bio-header{
-  position:sticky;
-  top:0;
+#bio-header {
+  position: sticky;
+  top: 0;
 }
 
 .bio-box {
@@ -327,7 +327,7 @@ form .info__active {
     left: 2rem;
   }
 
-  #intro--banner__img {
+  #intro-banner-img {
     height: 60%;
   }
 
