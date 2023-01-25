@@ -162,24 +162,24 @@ nav ul a {
 /* **Intro Section* */
 .section--intro {
   position: relative;
-}  
+}
 
 #intro-banner-img {
   width: 100%;
   object-fit: cover;
-}  
+}
 
 h1 {
   font-size: 1.5rem;
   position: absolute;
   top: 0.5rem;
   left: 1rem;
-}  
+}
 
-.section--intro > article{
-  background-color:var(--color-white);
-  padding:1rem;
-  border-radius:20px;
+.section--intro > article {
+  background-color: var(--color-white);
+  padding: 1rem;
+  border-radius: 20px;
 }
 
 #inclusivity-declaration {
@@ -188,7 +188,12 @@ h1 {
   border-radius: 20px;
   text-align: center;
 }
+
 /* *Bio Section* */
+#bio-section {
+  margin-top: 10rem;
+}
+
 #bios-gallery {
   display: flex;
   flex-flow: column nowrap;
@@ -200,26 +205,26 @@ h1 {
 #bio-header {
   position: sticky;
   top: 0;
-}  
+}
 
 .bio-box {
   height: 40%;
   max-width: var(--width-md);
   position: relative;
   box-shadow: 0 0 5px var(--color-highlight);
-}  
+}
 
 .bio-box__info {
   background-color: var(--color-base);
   height: 20%;
   padding: 5%;
-}  
+}
 
 .bio-box__title {
   text-align: center;
   font-size: 1.2rem;
   letter-spacing: 0.25rem;
-}  
+}
 
 .bio-box__button {
   padding: 0.2em;
@@ -228,11 +233,11 @@ h1 {
   color: var(--color-dark);
   font-weight: bold;
   cursor: pointer;
-}  
+}
 
 .bio-box__button:hover {
   color: var(--color-highlight);
-}  
+}
 
 .bio-box__description {
   display: none;
@@ -245,25 +250,26 @@ h1 {
   left: 5%;
   background-color: var(--color-highlight);
   overflow: auto;
-}  
+}
 
 .bio-box__info--active > .bio-box__description {
   display: block;
-}  
+}
 
 .bio-box__body {
   height: 80%;
   max-width: 450px;
-}  
+}
 
 .bio-box__image {
   object-fit: cover;
   width: 100%;
-}  
+}
 
 /* Gallery Section */
 .section--gallery {
-  position:relative;
+  position: relative;
+  margin-top: 0;
 }
 
 /**Bio Section**/
@@ -282,9 +288,9 @@ h1 {
 }
 
 .gallery-grid--frame:active > .gallery-grid--info {
-  visibility:visible;
-  opacity:1;
-  top:8rem;
+  visibility: visible;
+  opacity: 1;
+  top: 8rem;
   height: 50%;
   width: 80%;
 }
@@ -296,25 +302,25 @@ h1 {
 }
 
 .gallery-grid--info {
-  position:absolute;
-  transition:.3s linear;
-  visibility:hidden;
-  opacity:0;
-  top:0;
-  left:10%;
-  height:50%;
-  width:80%;
-  background-color:var(--color-highlight);
-  padding:1rem;
-  border-radius:20px;
-  overflow:auto;
+  position: absolute;
+  transition: 0.3s linear;
+  visibility: hidden;
+  opacity: 0;
+  top: 0;
+  left: 10%;
+  height: 50%;
+  width: 80%;
+  background-color: var(--color-highlight);
+  padding: 1rem;
+  border-radius: 20px;
+  overflow: auto;
 }
 
-.gallery-grid--info > h3{
-  color:var(--color-text);
-  font-size:1.2rem;
+.gallery-grid--info > h3 {
+  color: var(--color-text);
+  font-size: 1.2rem;
   text-align: left;
-  letter-spacing:.1rem;
+  letter-spacing: 0.1rem;
 }
 
 /* ***Grid CSS Fundamentals*** */
@@ -327,11 +333,26 @@ h1 {
 }
 
 /* contact form */
+.header__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.forms > form {
+  display: none;
+}
+
+.forms .active__form {
+  display: flex;
+}
+
 form .inputs > * {
   width: 80%;
 }
 
-form .inputs input {
+form .inputs input,
+form .inputs select {
   padding: 0.3rem;
 }
 
@@ -343,7 +364,8 @@ form textarea::placeholder {
   padding: 0.5rem;
 }
 
-form .buttons button {
+form .buttons button,
+.header__buttons button {
   width: fit-content;
   padding: 0.3rem 0.6rem;
   border-radius: 0.3rem;
@@ -353,7 +375,8 @@ form .buttons button {
   cursor: pointer;
 }
 
-form .buttons button:hover {
+form .buttons button:hover,
+.header__buttons button:hover {
   background: transparent;
   color: var(--color-black);
   border: 1px solid var(--color-text);
@@ -368,7 +391,7 @@ form p {
   display: none;
 }
 
-form .info__active {
+.forms .info__active {
   display: block;
 }
 
