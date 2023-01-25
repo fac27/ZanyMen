@@ -191,6 +191,7 @@ h1 {
 /* *Bio Section* */
 #bios-gallery {
   display: flex;
+  min-height:80%;
   flex-flow: column nowrap;
   align-items: center;
   justify-content: space-between;
