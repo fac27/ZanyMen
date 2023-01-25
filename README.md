@@ -20,3 +20,17 @@ Taking into account the User Stories, ZanyMen's webpage must have the following:
   - the website must be appealing and easy to navigate in any device (phone, tablet, laptop, etc..)
 - **personality**
   - users must be able to recognise the small company behind the website. It's important to let them know the founders through personal bios
+
+## Installation Guide
+If you are given access and need to review or contribute to the project, follow the steps below:
+
+- Clone the repository by running this command on your terminal
+  ``` terminal
+  git clone https://github.com/fac27/ZanyMen
+  ```
+- Open the cloned repository in your preferred code editor
+  - You can also run the Index.html file through your browser if needed
+
+## Other Notes
+- This page is being developed using a mobile-first approach. We recommend that you preview the page for mobile devices on your browser console when reviewing the code or submitting any changes.
+- All mentions of the arm-flailling-inflatable-tube-men market is facetious and should not be taken as a literal representation of the author's opinios.
