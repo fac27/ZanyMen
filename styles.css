@@ -129,9 +129,9 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   z-index: 1;
-  background-color: var(--color-dark);
+  background-color: var(--color-highlight);
 }
 
 nav {
@@ -139,7 +139,7 @@ nav {
 }
 
 nav img {
-  width: 25%;
+  max-width: 25%;
 }
 
 nav ul {
@@ -149,14 +149,14 @@ nav ul {
 nav ul a {
   text-decoration: none;
   font-weight: 600;
-  color: var(--color-text);
+  color: var(--color-black);
 }
 
 /* ************************** */
 /*section class and different section flags*/
 .section {
   height: 100vh;
-  scroll-margin-top: 4rem;
+  scroll-margin-top: 6vh;
 }
 
 /* **Intro Section* */
@@ -187,6 +187,7 @@ h1 {
   padding: 0.5em;
   border-radius: 20px;
   text-align: center;
+  color:var(--color-black);
 }
 /* *Bio Section* */
 #bios-gallery {
@@ -276,6 +277,7 @@ h1 {
   grid-auto-columns: 225px;
   grid-template-rows: repeat(2, 49%);
   gap: 10px;
+  padding:.5rem;
 }
 
 .gallery-grid--frame {
@@ -294,6 +296,7 @@ h1 {
   height: 100%;
   width: 100%;
   object-fit: cover;
+  cursor:pointer;
 }
 
 .gallery-grid--info {
@@ -373,6 +376,16 @@ form .info__active {
   display: block;
 }
 
+/* *Footer* */
+footer{
+  /* background-color:var(--color-highlight); */
+  width:100vw;
+  padding: 1rem;
+  font-weight:bold;
+  text-align:center;
+  /* text-shadow: 0 0 2px var(--color-highlight); */
+}
+
 /** media queries for larger screen sizes **/
 /*small tablets*/
 @media screen and (min-width: 520px) {
@@ -382,7 +395,7 @@ form .info__active {
 
   nav ul a:hover {
     text-decoration: underline;
-    color: var(--color-highlight);
+    color: var(--color-base);
   }
 
   .section {
@@ -400,7 +413,7 @@ form .info__active {
   }
 
   #intro-banner-img {
-    height: 60%;
+    max-height: 60%;
   }
 
   /* Bio Section */
