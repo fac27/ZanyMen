@@ -57,7 +57,6 @@
                 We are dedicated to bringing everyone the joy of inflatable men at low
                 costs and with a smile. That means we are dedicated to <i>you!</i>
             </p>
-
             <p id="intro-paragraph2" class="justified">
                 Go ahead and visit our gallery, and if you see something you like, you
                 can contact the Alphonso or Zack, the ZanyMen themselves, to place an
@@ -174,7 +173,6 @@
                     </p>
                 </figcaption>
             </figure>
-
             <figure tabindex="0" class="gallery-grid--frame gallery-grid--frame__tall">
                 <img class="gallery-grid--image"
                     src="https://thenewswheel.com/wp-content/uploads/2013/12/wacky-waving-inflatable-arm-flailing-tube-man.jpg"
@@ -188,7 +186,6 @@
                     </p>
                 </figcaption>
             </figure>
-
             <figure tabindex="0" class="gallery-grid--frame">
                 <img class="gallery-grid--image"
                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnONiQLyqWFKE0MjrbOMjeUEeicEvuRQbfRg&usqp=CAU"
@@ -202,7 +199,6 @@
                     </p>
                 </figcaption>
             </figure>
-
             <figure tabindex="0" class="gallery-grid--frame gallery-grid--frame__long">
                 <img class="gallery-grid--image"
                     src="https://thumbs.dreamstime.com/b/inflatable-wacky-waving-dancing-tube-man-against-blue-sky-dancing-tube-man-99466539.jpg"
@@ -217,7 +213,6 @@
                     </p>
                 </figcaption>
             </figure>
-
             <figure tabindex="0" class="gallery-grid--frame">
                 <img class="gallery-grid--image"
                     src="https://content.instructables.com/FYL/OMUL/HNKGH28G/FYLOMULHNKGH28G.jpg?auto=webp&fit=bounds&frame=1&height=1024&width=1024auto=webp&frame=1&height=150"
@@ -241,29 +236,72 @@
 
     <!-- *********************** -->
     <!-- Form section -->
-    <section id="form-section" class="section center stack-m">
-        <h2>
-            Contact Us
-            <hr />
-        </h2>
-        <form class="submission__form stack-m" action="">
-            <div class="inputs flex column stack-s">
-                <label for="name">Name</label>
-                <input type="text" name="name" id="name" required />
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email" required />
-                <label for="message">Message</label>
-                <textarea name="message" id="message" cols="30" rows="8"
-                    placeholder="your message here.." required></textarea>
-            </div>
+    <section id="form-section" class="section center stack-s">
 
-            <div class="buttons flex row gap-m">
-                <button type="reset">Reset</button>
-                <button type="submit">Submit</button>
-            </div>
+        <div class="header__buttons">
+            <button class="contact__button">Contact Us</button>
+            <button class="order__button">Place an Order</button>
+        </div>
 
-            <p class="submission__info">Form submitted successfully!</p>
-        </form>
+        <hr />
+
+        <div class="forms stack-l">
+            <form class="contact__form active__form flex column stack-m">
+                <div class="inputs flex column stack-s">
+                    <label for="name__contact">Name</label>
+                    <input type="text" name="name__contact" id="name__contact"
+                        placeholder="e.g James Kirk" required />
+                    <label for="email__contact">Email</label>
+                    <input type="email" name="email__contact" id="email__contact"
+                        placeholder="sulu@starfleet.com" required />
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" cols="30" rows="8"
+                        placeholder="your message here.." required></textarea>
+                </div>
+
+                <div class="buttons flex row gap-m">
+                    <button type="reset">Reset</button>
+                    <button type="submit">Submit</button>
+                </div>
+
+                <p class="submission__info">Form submitted successfully!</p>
+            </form>
+
+            <form class="order__form flex column stack-m">
+                <div class="inputs flex column stack-s">
+                    <label for="name__order">Name</label>
+                    <input type="text" name="name__order" id="name__order"
+                        placeholder="e.g James Kirk" required />
+                    <label for="email__order">Email</label>
+                    <input type="email" name="email__order" id="email__order"
+                        placeholder="sulu@starfleet.com" required />
+
+                    <label for="models">Choose a model:</label>
+                    <select name="models" id="models">
+                        <option value="red-tube-man">Classic Red Tube Man</option>
+                        <option value="red-tube-scarecrow">Red Tube Scarecrow</option>
+                        <option value="yellow-destroyer">Yellow Destroyer Man</option>
+                        <option value="orange-legged">Orange Legged Man</option>
+                        <option value="tiny-desk-man">Tiny Desk Tube Man</option>
+                        <option value="red-four-limbed">Red Four Limbed Red Man
+                        </option>
+                        <option value="living-tube-man">Living Tube Man</option>
+                    </select>
+
+                    <label for="amount">Amount</label>
+                    <input type="number" min="1" max="1000" name="amount" id="amount"
+                        placeholder="the more the flalier" required />
+                </div>
+
+                <div class="buttons flex row gap-m">
+                    <button type="reset">Reset</button>
+                    <button type="submit">Submit</button>
+                </div>
+
+                <p class="order__info">Order received successfully!</p>
+            </form>
+
+        </div>
     </section>
 
     <!-- *********************** -->
