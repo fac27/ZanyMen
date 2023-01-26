@@ -93,7 +93,13 @@
                         ZanyMen.
                         His great-great-grandfather also invented the left shoe in 1818.
                     </p>
-                    <button type="button" role="button" class="bio-box__button">
+                    <button 
+                    type="button" 
+                    class="bio-box__button"
+                    aria-label="read more about Alphonso"
+                    aria-expanded="false"
+                    aria-activedescendant="bio1-description"
+                    >
                         Read more
                     </button>
                 </div>
@@ -115,7 +121,13 @@
                         In 1789, his twice-removed great-cousin sharpened the blade of the
                         first guillotine.
                     </p>
-                    <button class="bio-box__button" type="button">
+                    <button 
+                    class="bio-box__button" 
+                    type="button"
+                    aria-label="read more about Zakarie"
+                    aria-expanded="false"
+                    aria-activedescendant="bio2-description"
+                    >
                         Read more
                     </button>
                 </div>
@@ -253,7 +265,7 @@
                         placeholder="e.g James Kirk" required />
                     <label for="email__contact">Email</label>
                     <input type="email" name="email__contact" id="email__contact"
-                        placeholder="sulu@starfleet.com" required />
+                        placeholder="e.g sulu@starfleet.com" required />
                     <label for="message">Message</label>
                     <textarea name="message" id="message" cols="30" rows="8"
                         placeholder="your message here.." required></textarea>
@@ -274,7 +286,7 @@
                         placeholder="e.g James Kirk" required />
                     <label for="email__order">Email</label>
                     <input type="email" name="email__order" id="email__order"
-                        placeholder="sulu@starfleet.com" required />
+                        placeholder="e.g sulu@starfleet.com" required />
 
                     <label for="models">Choose a model:</label>
                     <select name="models" id="models">

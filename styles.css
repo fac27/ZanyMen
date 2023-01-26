@@ -251,6 +251,7 @@ h1 {
   top: 5%;
   left: 5%;
   background-color: var(--color-highlight);
+  color:var(--color-black);
   overflow: auto;
 }
 
@@ -315,13 +316,14 @@ h1 {
   height: 50%;
   width: 80%;
   background-color: var(--color-highlight);
+  color:var(--color-black);
   padding: 1rem;
   border-radius: 20px;
   overflow: auto;
 }
 
 .gallery-grid--info > h3 {
-  color: var(--color-text);
+  color: var(--color-black);
   font-size: 1.2rem;
   text-align: left;
   letter-spacing: 0.1rem;
