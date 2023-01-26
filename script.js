@@ -14,20 +14,14 @@ const orderBtn = document.querySelector('.order__button');
 const contactForm = document.querySelector('.contact__form');
 const orderForm = document.querySelector('.order__form');
 
-contactBtn.addEventListener('click', () => {
-  orderForm.classList.remove('active__form');
-  contactForm.classList.add('active__form');
+[contactBtn, orderBtn].forEach((btn) => {
+  btn.addEventListener('click', () => {
+    orderForm.classList.toggle('active__form');
+    contactForm.classList.toggle('active__form');
 
-  contactBtn.classList.add('active__form-header');
-  orderBtn.classList.remove('active__form-header');
-});
-
-orderBtn.addEventListener('click', () => {
-  contactForm.classList.remove('active__form');
-  orderForm.classList.add('active__form');
-
-  orderBtn.classList.add('active__form-header');
-  contactBtn.classList.remove('active__form-header');
+    orderBtn.classList.toggle('active__form--header');
+    contactBtn.classList.toggle('active__form--header');
+  });
 });
 
 // form submission

@@ -345,7 +345,7 @@ h1 {
   cursor: pointer;
 }
 
-.active__form-header {
+.active__form--header {
   border-bottom: 5px solid red;
 }
 
