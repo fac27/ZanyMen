@@ -187,7 +187,7 @@ h1 {
   padding: 0.5em;
   border-radius: 20px;
   text-align: center;
-  color:var(--color-black);
+  color: var(--color-black);
 }
 
 /* *Bio Section* */
@@ -197,7 +197,7 @@ h1 {
 
 #bios-gallery {
   display: flex;
-  min-height:80%;
+  min-height: 80%;
   flex-flow: column nowrap;
   align-items: center;
   justify-content: space-between;
@@ -284,7 +284,7 @@ h1 {
   grid-auto-columns: 225px;
   grid-template-rows: repeat(2, 49%);
   gap: 10px;
-  padding:.5rem;
+  padding: 0.5rem;
 }
 
 .gallery-grid--frame {
@@ -303,7 +303,7 @@ h1 {
   height: 100%;
   width: 100%;
   object-fit: cover;
-  cursor:pointer;
+  cursor: pointer;
 }
 
 .gallery-grid--info {
@@ -340,9 +340,15 @@ h1 {
 
 /* contact form */
 .header__buttons {
+  width: 90;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  cursor: pointer;
+}
+
+.active__form--header {
+  border-bottom: 5px solid red;
 }
 
 .forms > form {
@@ -402,12 +408,12 @@ form p {
 }
 
 /* *Footer* */
-footer{
+footer {
   /* background-color:var(--color-highlight); */
-  width:100vw;
+  width: 100vw;
   padding: 1rem;
-  font-weight:bold;
-  text-align:center;
+  font-weight: bold;
+  text-align: center;
   /* text-shadow: 0 0 2px var(--color-highlight); */
 }
 
@@ -459,6 +465,10 @@ footer{
   }
 
   /* Form Section */
+  .header__buttons {
+    width: 50%;
+  }
+
   form .inputs > * {
     width: 50%;
   }
