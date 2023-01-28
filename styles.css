@@ -344,10 +344,16 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  cursor: pointer;
 }
 
-.active__form--header {
+.header__buttons button {
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  font-weight: bold;
+}
+
+.header__buttons button.active__form--header {
   border-bottom: 5px solid red;
 }
 
@@ -376,8 +382,7 @@ form textarea::placeholder {
   padding: 0.5rem;
 }
 
-form .buttons button,
-.header__buttons button {
+form .buttons button {
   width: fit-content;
   padding: 0.3rem 0.6rem;
   border-radius: 0.3rem;
@@ -387,8 +392,7 @@ form .buttons button,
   cursor: pointer;
 }
 
-form .buttons button:hover,
-.header__buttons button:hover {
+form .buttons button:hover {
   background: transparent;
   color: var(--color-black);
   border: 1px solid var(--color-text);
