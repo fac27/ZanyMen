@@ -250,16 +250,50 @@
     <!-- Form section -->
     <section id="form-section" class="section center stack-s">
 
-        <div class="header__buttons">
-            <button type="button" class="contact__button active__form--header">Contact
-                Us</button>
-            <button type="button" class="order__button">Place an Order</button>
-        </div>
+        <input 
+        id="selector--contact" 
+        name="form-selector" 
+        type="radio" 
+        value="contactForm" 
+        class="selector__button"
+        checked="checked"
+        >
+        <label for="selector--contact" class="selector__label">Contact us</label>
+        <input 
+        id="selector--order" 
+        name="form-selector" 
+        type="radio" 
+        value="orderForm" 
+        class="selector__button"
+        >
+        <label for="selector--order" class="selector__label">Place and order</label>
+
+        <!-- <div class="header__buttons gap-s">
+            <button 
+            type="button" 
+            class="contact__button active__form--header"
+            aria-activedescendant="contact-form"
+            >
+                Contact Us
+            </button>
+            <button 
+            type="button" 
+            class="order__button"
+            aria-activedescendant="order-form"
+            >
+                Place an Order
+            </button>
+        </div> -->
 
         <hr />
 
         <div class="forms stack-l">
-            <form class="contact__form active__form flex column stack-m">
+            <form 
+            id="contact-form" 
+            class="contact__form active__form flex column stack-m" 
+            aria-label="contact form"
+            tabindex="0"
+            >
                 <div class="inputs flex column stack-s">
                     <label for="name__contact">Name</label>
                     <input type="text" name="name__contact" id="name__contact"
@@ -280,7 +314,12 @@
                 <p class="submission__info">Form submitted successfully!</p>
             </form>
 
-            <form class="order__form flex column stack-m">
+            <form 
+            id="order-form" 
+            class="order__form flex column stack-m"
+            aria-label="order form"
+            tabindex="0"
+            >
                 <div class="inputs flex column stack-s">
                     <label for="name__order">Name</label>
                     <input type="text" name="name__order" id="name__order"
@@ -291,19 +330,18 @@
 
                     <label for="models">Choose a model:</label>
                     <select name="models" id="models">
+                        <option value="" disabled selected hidden></option>
                         <option value="red-tube-man">Classic Red Tube Man</option>
                         <option value="red-tube-scarecrow">Red Tube Scarecrow</option>
                         <option value="yellow-destroyer">Yellow Destroyer Man</option>
                         <option value="orange-legged">Orange Legged Man</option>
                         <option value="tiny-desk-man">Tiny Desk Tube Man</option>
-                        <option value="red-four-limbed">Red Four Limbed Red Man
-                        </option>
+                        <option value="red-four-limbed">Red Four Limbed Red Man</option>
                         <option value="living-tube-man">Living Tube Man</option>
                     </select>
 
                     <label for="amount">Amount</label>
-                    <input type="number" min="1" max="1000" name="amount" id="amount"
-                        placeholder="the more the flalier" required />
+                    <input type="number" min="1" max="1000" name="amount" id="amount" required />
                 </div>
 
                 <div class="buttons flex row gap-m">

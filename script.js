@@ -9,20 +9,21 @@ for (let btn of readMoreBtns) {
 }
 
 // toggle forms
-const contactBtn = document.querySelector('.contact__button');
-const orderBtn = document.querySelector('.order__button');
 const contactForm = document.querySelector('.contact__form');
 const orderForm = document.querySelector('.order__form');
+let formSelectors = document.querySelectorAll('.selector__button');
 
-[contactBtn, orderBtn].forEach((btn) => {
-  btn.addEventListener('click', () => {
-    orderForm.classList.toggle('active__form');
-    contactForm.classList.toggle('active__form');
-
-    orderBtn.classList.toggle('active__form--header');
-    contactBtn.classList.toggle('active__form--header');
-  });
-});
+formSelectors.forEach(button => {
+  button.addEventListener('click', () => {
+    if(button.value === 'contactForm'){
+      contactForm.classList.add('active__form');
+      orderForm.classList.remove('active__form');
+    }else{
+      contactForm.classList.remove('active__form');
+      orderForm.classList.add('active__form');
+    }
+  })
+})
 
 // form submission
 const submissionInfo = document.querySelector('.submission__info');
