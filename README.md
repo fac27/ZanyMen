@@ -30,6 +30,9 @@ If you are given access and need to review or contribute to the project, follow 
   ```
 - Open the cloned repository in your preferred code editor
   - You can also run the Index.html file through your browser if needed
+  
+## Debugging
+The current version of this page shows a score of 89% on lighthouse when reporting on accessibility. This result is traced back to some aria properties attributed to buttons in our page. In this case, a perfect score has been exchanged for a practical improvement to the accessibility of our page. The aria properties ('aria-expanded' and 'aria-activedescendant') allow screen reader users to know that these buttons are collapsed by default and will direct the screen reader to the intended text once the button is expanded. These functionalities are not present otherwise, so the properties have been kept.
 
 ## Other Notes
 - This page is being developed using a mobile-first approach. We recommend that you preview the page for mobile devices on your browser console when reviewing the code or submitting any changes.
