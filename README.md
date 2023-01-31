@@ -30,10 +30,33 @@ If you are given access and need to review or contribute to the project, follow 
   ```
 - Open the cloned repository in your preferred code editor
   - You can also run the Index.html file through your browser if needed
+- This page is being developed using a mobile-first approach. We recommend that you preview the page for mobile devices on your browser console when reviewing the code or submitting any changes.
   
 ## Debugging
 The current version of this page shows a score of 89% on lighthouse when reporting on accessibility. This result is traced back to some aria properties attributed to buttons in our page. In this case, a perfect score has been exchanged for a practical improvement to the accessibility of our page. The aria properties ('aria-expanded' and 'aria-activedescendant') allow screen reader users to know that these buttons are collapsed by default and will direct the screen reader to the intended text once the button is expanded. These functionalities are not present otherwise, so the properties have been kept.
 
+## Learning Outcomes
+This page is the outcome of the first project in our skills bootcamp at Founders and Coders Cohort 27. It aims at the fulfilling the learning outcomes below:
+
+### Accessibility
+- [x] Structure a site using semantic HTML to aid accessibility
+- [x] Ensure a we page is readable for screen readers
+- [ ] Ensure our UI has sufficient colour contrast so that everyone can perceive it comfortably
+- [x] Use various tools to check that our website meets accessibility criteria
+
+### Design
+- [x] Use CSS media queries to ensure our content is always presented affectively on screens of different sizes
+- [x] Demonstrate a mobile-first approach to building a website
+- [x] Use CSS variables to apply repeated colours to HTML elements
+- [x] Use CSS Flexbox to style children in a single-dirrection layout (ie a row or a column)
+- [x] Use CSS Grid to style children in a two-direction layout
+
+### Worflow
+- [x] Ensure our Git commit history tells a coherent story
+
+### HTML Forms
+- [x] Use the appropriate input types in HTML forms for gathering different types of information
+
 ## Other Notes
-- This page is being developed using a mobile-first approach. We recommend that you preview the page for mobile devices on your browser console when reviewing the code or submitting any changes.
+
 - All mentions of the arm-flailling-inflatable-tube-men market is facetious and should not be taken as a literal representation of the author's opinios.
