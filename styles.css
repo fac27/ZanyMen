@@ -15,9 +15,6 @@
   --color-dark: #7e685a;
   --color-black: #000000;
   --color-white: #ffffff;
-  --width-sm: 20rem;
-  --width-md: 40rem;
-  --width-lg: 60rem;
 }
 
 html {
@@ -27,6 +24,26 @@ html {
 body {
   background-color: var(--color-base);
   color: var(--color-text);
+}
+
+/* ************************** */
+/* General - primitive - styles */
+h1 {
+  font-size: 1.5rem;
+  position: absolute;
+  top: 0.5rem;
+  left: 1rem;
+}
+
+h2 {
+  font-size: 1.4rem;
+  letter-spacing: 0.1rem;
+}
+
+hr {
+  border: 2.5px solid var(--color-text);
+  margin-bottom: 2rem;
+  border-radius: 20px;
 }
 
 .center {
@@ -55,32 +72,8 @@ body {
   justify-content: space-around;
 }
 
-.justify-between {
-  justify-content: space-between;
-}
-
-.justify-evenly {
-  justify-content: space-evenly;
-}
-
-.justify-center {
-  justify-content: center;
-}
-
-.align-start {
-  align-items: flex-start;
-}
-
 .align-center {
   align-items: center;
-}
-
-.align-end {
-  align-items: flex-end;
-}
-
-.justified {
-  text-align: justify;
 }
 
 .stack-s > * + * {
@@ -91,38 +84,20 @@ body {
   margin-top: 1.5rem;
 }
 
-.stack-l > * + * {
-  margin-top: 2.5rem;
-}
-
 .stack-xl > * + * {
   margin-top: 4rem;
-}
-
-.gap-s {
-  gap: 0.5rem;
 }
 
 .gap-m {
   gap: 1rem;
 }
 
-.gap-l {
-  gap: 2rem;
+.section {
+  height: 100vh;
+  scroll-margin-top: 6vh;
 }
 
-h2 {
-  font-size: 1.4rem;
-  letter-spacing: 0.1rem;
-}
-
-hr {
-  border: 2.5px solid var(--color-text);
-  margin-bottom: 2rem;
-  border-radius: 20px;
-}
-
-/* ********************* */
+/* ************************** */
 /* header */
 header {
   width: 100vw;
@@ -153,13 +128,7 @@ nav ul a {
 }
 
 /* ************************** */
-/*section class and different section flags*/
-.section {
-  height: 100vh;
-  scroll-margin-top: 6vh;
-}
-
-/* **Intro Section* */
+/* intro Section */
 .section--intro {
   position: relative;
 }
@@ -167,13 +136,6 @@ nav ul a {
 #intro-banner-img {
   width: 100%;
   object-fit: cover;
-}
-
-h1 {
-  font-size: 1.5rem;
-  position: absolute;
-  top: 0.5rem;
-  left: 1rem;
 }
 
 .section--intro > article {
@@ -190,7 +152,8 @@ h1 {
   color: var(--color-black);
 }
 
-/* *Bio Section* */
+/* ************************** */
+/* bio Section */
 #bio-section {
   margin-top: 10rem;
 }
@@ -251,7 +214,7 @@ h1 {
   top: 5%;
   left: 5%;
   background-color: var(--color-highlight);
-  color:var(--color-black);
+  color: var(--color-black);
   overflow: auto;
 }
 
@@ -269,13 +232,13 @@ h1 {
   width: 100%;
 }
 
-/* Gallery Section */
+/* ************************** */
+/* gallery Section */
 .section--gallery {
   position: relative;
   margin-top: 0;
 }
 
-/**Bio Section**/
 #gallery-grid {
   overflow: scroll;
   height: 70vh;
@@ -316,7 +279,7 @@ h1 {
   height: 50%;
   width: 80%;
   background-color: var(--color-highlight);
-  color:var(--color-black);
+  color: var(--color-black);
   padding: 1rem;
   border-radius: 20px;
   overflow: auto;
@@ -329,7 +292,6 @@ h1 {
   letter-spacing: 0.1rem;
 }
 
-/* ***Grid CSS Fundamentals*** */
 .gallery-grid--frame__long {
   grid-column: span 2;
 }
@@ -338,41 +300,25 @@ h1 {
   grid-row: span 2;
 }
 
-/* **Form Selector** */
-.selector__button{
-  opacity:0;
-  position:absolute;
+/* ************************** */
+/* form section */
+.selector__button {
+  opacity: 0;
+  position: absolute;
 }
 
-.selector__label{
-  margin:0 .2em;
-  font-size:1.2rem;
+.selector__label {
+  margin: 0 0.2em;
+  font-size: 1.2rem;
 }
 
-.selector__button:checked + .selector__label{
-  font-weight:bold;
-  color:var(--color-highlight);
-}
-
-/* contact form */
-.header__buttons {
-  width: 90;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.header__buttons button {
-  cursor: pointer;
-  border: none;
-  background: transparent;
+.selector__button:checked + .selector__label {
   font-weight: bold;
-  color:gray;
+  color: var(--color-highlight);
 }
 
-.header__buttons button.active__form--header {
-  border-bottom: 5px solid red;
-  color:var(--color-text);
+#form-section > label {
+  cursor: pointer;
 }
 
 .forms > form {
@@ -385,15 +331,6 @@ h1 {
 
 form .inputs > * {
   width: 80%;
-}
-
-form .inputs input,
-form .inputs select {
-  padding: 0.3rem;
-}
-
-form .inputs input {
-  padding: 0.3rem;
 }
 
 form textarea::placeholder {
@@ -429,18 +366,18 @@ form p {
   display: block;
 }
 
-/* *Footer* */
+/* ************************** */
+/* footer section */
 footer {
-  /* background-color:var(--color-highlight); */
   width: 100vw;
   padding: 1rem;
   font-weight: bold;
   text-align: center;
-  /* text-shadow: 0 0 2px var(--color-highlight); */
 }
 
-/** media queries for larger screen sizes **/
-/*small tablets*/
+/* ************************** */
+/** media queries **/
+/* small tablets */
 @media screen and (min-width: 520px) {
   nav img {
     width: 10rem;
@@ -495,7 +432,8 @@ footer {
     width: 50%;
   }
 
-  form .inputs input {
+  form .inputs input,
+  form .inputs select {
     padding: 0.4rem;
   }
 

@@ -16,7 +16,7 @@
     <!-- *********************** -->
     <!-- NAVIGATION SECTION -->
     <header>
-        <nav class="flex align-center justify-around gap-s">
+        <nav class="flex align-center justify-around gap-m">
             <img src="./imgs/logo1.png" alt="website logo reading: ZanyMen" />
 
             <!-- nav links -->
@@ -93,13 +93,9 @@
                         ZanyMen.
                         His great-great-grandfather also invented the left shoe in 1818.
                     </p>
-                    <button 
-                    type="button" 
-                    class="bio-box__button"
-                    aria-label="read more about Alphonso"
-                    aria-expanded="false"
-                    aria-activedescendant="bio1-description"
-                    >
+                    <button type="button" class="bio-box__button"
+                        aria-label="read more about Alphonso" aria-expanded="false"
+                        aria-activedescendant="bio1-description">
                         Read more
                     </button>
                 </div>
@@ -115,19 +111,15 @@
                 <div class="bio-box__info flex row justify-around">
                     <p class="bio-box__title">Zakarie</p>
                     <p id="bio2-description" class="bio-box__description justified">
-                        Zackarie left home at 16 with only a backpack and a small loan of
+                        Zakarie left home at 16 with only a backpack and a small loan of
                         300 million from his parents to start his own inflatable men
                         emporium.
                         In 1789, his twice-removed great-cousin sharpened the blade of the
                         first guillotine.
                     </p>
-                    <button 
-                    class="bio-box__button" 
-                    type="button"
-                    aria-label="read more about Zakarie"
-                    aria-expanded="false"
-                    aria-activedescendant="bio2-description"
-                    >
+                    <button class="bio-box__button" type="button"
+                        aria-label="read more about Zakarie" aria-expanded="false"
+                        aria-activedescendant="bio2-description">
                         Read more
                     </button>
                 </div>
@@ -250,50 +242,18 @@
     <!-- Form section -->
     <section id="form-section" class="section center stack-s">
 
-        <input 
-        id="selector--contact" 
-        name="form-selector" 
-        type="radio" 
-        value="contactForm" 
-        class="selector__button"
-        checked="checked"
-        >
+        <input id="selector--contact" name="form-selector" type="radio"
+            value="contactForm" class="selector__button" checked="checked">
         <label for="selector--contact" class="selector__label">Contact us</label>
-        <input 
-        id="selector--order" 
-        name="form-selector" 
-        type="radio" 
-        value="orderForm" 
-        class="selector__button"
-        >
-        <label for="selector--order" class="selector__label">Place and order</label>
-
-        <!-- <div class="header__buttons gap-s">
-            <button 
-            type="button" 
-            class="contact__button active__form--header"
-            aria-activedescendant="contact-form"
-            >
-                Contact Us
-            </button>
-            <button 
-            type="button" 
-            class="order__button"
-            aria-activedescendant="order-form"
-            >
-                Place an Order
-            </button>
-        </div> -->
+        <input id="selector--order" name="form-selector" type="radio" value="orderForm"
+            class="selector__button">
+        <label for="selector--order" class="selector__label">Place an order</label>
 
         <hr />
 
         <div class="forms stack-l">
-            <form 
-            id="contact-form" 
-            class="contact__form active__form flex column stack-m" 
-            aria-label="contact form"
-            tabindex="0"
-            >
+            <form id="contact-form" class="contact__form active__form flex column stack-m"
+                aria-label="contact form" tabindex="0">
                 <div class="inputs flex column stack-s">
                     <label for="name__contact">Name</label>
                     <input type="text" name="name__contact" id="name__contact"
@@ -314,12 +274,8 @@
                 <p class="submission__info">Form submitted successfully!</p>
             </form>
 
-            <form 
-            id="order-form" 
-            class="order__form flex column stack-m"
-            aria-label="order form"
-            tabindex="0"
-            >
+            <form id="order-form" class="order__form flex column stack-m"
+                aria-label="order form" tabindex="0">
                 <div class="inputs flex column stack-s">
                     <label for="name__order">Name</label>
                     <input type="text" name="name__order" id="name__order"
@@ -341,7 +297,8 @@
                     </select>
 
                     <label for="amount">Amount</label>
-                    <input type="number" min="1" max="1000" name="amount" id="amount" required />
+                    <input type="number" min="1" max="1000" name="amount" id="amount"
+                        required />
                 </div>
 
                 <div class="buttons flex row gap-m">
