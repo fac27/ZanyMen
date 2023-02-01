@@ -15,8 +15,13 @@ const formSelectors = document.querySelectorAll('.selector__button');
 
 formSelectors.forEach((button) => {
   button.addEventListener('click', () => {
-    contactForm.classList.toggle('active__form');
-    orderForm.classList.toggle('active__form');
+    if(button.value === 'contactForm'){
+        contactForm.classList.add('active__form');
+        orderForm.classList.remove('active__form');
+      }else{
+        contactForm.classList.remove('active__form');
+        orderForm.classList.add('active__form');
+      }
   });
 });
 
