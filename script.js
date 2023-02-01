@@ -11,19 +11,19 @@ for (let btn of readMoreBtns) {
 // toggle forms
 const contactForm = document.querySelector('.contact__form');
 const orderForm = document.querySelector('.order__form');
-let formSelectors = document.querySelectorAll('.selector__button');
+const formSelectors = document.querySelectorAll('.selector__button');
 
-formSelectors.forEach(button => {
+formSelectors.forEach((button) => {
   button.addEventListener('click', () => {
     if(button.value === 'contactForm'){
-      contactForm.classList.add('active__form');
-      orderForm.classList.remove('active__form');
-    }else{
-      contactForm.classList.remove('active__form');
-      orderForm.classList.add('active__form');
-    }
-  })
-})
+        contactForm.classList.add('active__form');
+        orderForm.classList.remove('active__form');
+      }else{
+        contactForm.classList.remove('active__form');
+        orderForm.classList.add('active__form');
+      }
+  });
+});
 
 // form submission
 const submissionInfo = document.querySelector('.submission__info');
@@ -31,6 +31,7 @@ const orderInfo = document.querySelector('.order__info');
 
 const getCustomizedDate = () => {
   const dateTime = new Date().toString();
+  // extract date-time formated as mm/dd/yyyy-hour-min-sec
   const customizedDate = dateTime
     .slice(0, dateTime.indexOf('('))
     .split(' ')
@@ -58,7 +59,6 @@ contactForm.addEventListener('submit', (e) => {
 
   if (contactSubmissions) {
     contactSubmissions.push(contactObj);
-    localStorage.removeItem('contactSubmissions');
     localStorage.setItem(
       'contactSubmissions',
       JSON.stringify(contactSubmissions)
@@ -78,14 +78,12 @@ orderForm.addEventListener('submit', (e) => {
   orderForm.reset();
   orderInfo.classList.add('info__active');
 
-  // store info into localstorage
   const orderObj = { [getCustomizedDate()]: [name, email, model, amount] };
 
   const orderSubmissions = JSON.parse(localStorage.getItem('orderSubmissions'));
 
   if (orderSubmissions) {
     orderSubmissions.push(orderObj);
-    localStorage.removeItem('orderSubmissions');
     localStorage.setItem('orderSubmissions', JSON.stringify(orderSubmissions));
   } else {
     localStorage.setItem('orderSubmissions', JSON.stringify([orderObj]));
