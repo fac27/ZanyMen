@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-size: 18px;
+  font-size: 16px;
   font-family: 'Poppins', sans-serif;
   letter-spacing: 0.05rem;
 }
@@ -126,7 +126,7 @@ nav ul a {
 
 /* ************************** */
 /* intro Section */
-#intro-section h1 {
+h1 {
   font-size: 1.5rem;
   position: absolute;
   top: 0.5rem;
