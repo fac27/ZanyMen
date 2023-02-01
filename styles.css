@@ -4,17 +4,19 @@
   padding: 0;
   box-sizing: border-box;
   font-size: 18px;
-  font-family: sans-serif;
+  font-family: 'Poppins', sans-serif;
   letter-spacing: 0.05rem;
 }
 
 :root {
   --color-base: #f5f5f5;
-  --color-highlight: #e7717d;
+  --color-highlight: #036b8e;
   --color-text: #1d3557;
   --color-dark: #7e685a;
-  --color-black: #000000;
-  --color-white: #ffffff;
+  --color-white: #fff;
+  --color-black: #0f0f1b;
+
+  --color-header: #bbc2cd;
 }
 
 html {
@@ -28,15 +30,8 @@ body {
 
 /* ************************** */
 /* General - primitive - styles */
-h1 {
-  font-size: 1.5rem;
-  position: absolute;
-  top: 0.5rem;
-  left: 1rem;
-}
-
 h2 {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   letter-spacing: 0.1rem;
 }
 
@@ -106,7 +101,9 @@ header {
   left: 0;
   padding: 0.5rem 1rem;
   z-index: 1;
-  background-color: var(--color-highlight);
+  background-color: var(--color-header);
+  border-radius: 0;
+  width: 100%;
 }
 
 nav {
@@ -129,6 +126,14 @@ nav ul a {
 
 /* ************************** */
 /* intro Section */
+#intro-section h1 {
+  font-size: 1.5rem;
+  position: absolute;
+  top: 0.5rem;
+  left: 1rem;
+  width: 100%;
+}
+
 .section--intro {
   position: relative;
 }
@@ -146,10 +151,10 @@ nav ul a {
 
 #inclusivity-declaration {
   background-color: var(--color-highlight);
+  color: var(--color-base);
   padding: 0.5em;
   border-radius: 20px;
-  text-align: center;
-  color: var(--color-black);
+  width: 100%;
 }
 
 /* ************************** */
@@ -165,11 +170,6 @@ nav ul a {
   align-items: center;
   justify-content: space-between;
   position: relative;
-}
-
-#bio-header {
-  position: sticky;
-  top: 0;
 }
 
 .bio-box {
@@ -207,6 +207,7 @@ nav ul a {
 .bio-box__description {
   display: none;
   position: absolute;
+  font-size: 0.9rem;
   width: 90%;
   height: 65%;
   padding: 0.8em;
@@ -214,8 +215,13 @@ nav ul a {
   top: 5%;
   left: 5%;
   background-color: var(--color-highlight);
-  color: var(--color-black);
+  color: var(--color-base);
   overflow: auto;
+}
+
+.bio-box__description > span {
+  display: block;
+  margin-top: 2rem;
 }
 
 .bio-box__info--active > .bio-box__description {
@@ -223,7 +229,7 @@ nav ul a {
 }
 
 .bio-box__body {
-  height: 80%;
+  /* height: 250px; */
   max-width: 450px;
 }
 
@@ -318,6 +324,7 @@ nav ul a {
 }
 
 #form-section > label {
+  font-size: 1.1rem;
   cursor: pointer;
 }
 
@@ -379,13 +386,17 @@ footer {
 /** media queries **/
 /* small tablets */
 @media screen and (min-width: 520px) {
+  header {
+    border-radius: 0 0 2rem 2rem;
+  }
+
   nav img {
     width: 10rem;
   }
 
   nav ul a:hover {
     text-decoration: underline;
-    color: var(--color-base);
+    color: var(--color-highlight);
   }
 
   .section {
@@ -406,9 +417,19 @@ footer {
     max-height: 60%;
   }
 
+  #inclusivity-declaration {
+    text-align: center;
+    width: 75%;
+  }
+
   /* Bio Section */
   #bio-header {
     font-size: 2.5rem;
+  }
+
+  .bio-box__description > span {
+    display: block;
+    margin-top: 2rem;
   }
 
   #bios-gallery {
