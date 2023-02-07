@@ -41,7 +41,7 @@ This page is the outcome of the first project in our skills bootcamp at Founders
 ### Accessibility
 - [x] Structure a site using semantic HTML to aid accessibility
 - [x] Ensure a we page is readable for screen readers
-- [ ] Ensure our UI has sufficient colour contrast so that everyone can perceive it comfortably
+- [x] Ensure our UI has sufficient colour contrast so that everyone can perceive it comfortably
 - [x] Use various tools to check that our website meets accessibility criteria
 
 ### Design
